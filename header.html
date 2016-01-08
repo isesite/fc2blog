@@ -65,6 +65,7 @@
 		});
 
 		$('.subitem').slick({
+			arrows : false,
 			vertical : true, //縦表示
 			//arrows : true, 矢印
 			//autoplaySpeed : 5000    自動スライドの間隔
@@ -88,7 +89,7 @@
 				</h1>
 			</header>
 
-			<div class="col-sm-3">
+			<div class="col-sm-5">
 				<p><%introduction></p>
 			</div>
 
@@ -108,7 +109,7 @@
 				</div>
 				<div>
 					<p>タイトル02</p>
-					<iframe height="100%" src="" border="1"></iframe>
+					<iframe height="90%" width="90%" src="" border="1"></iframe>
 					<p>
 						<a href="">リンク02</a>
 					</p>
@@ -155,7 +156,7 @@
 						コンテンツ04</span>
 				</div>
 				<div class="panel ise_contents_item">
-					<span class="glyphicon glyphicon-comment" aria-hidden="true">
+					<span class="glyphicon glyphicon-user" aria-hidden="true">
 						コンテンツ05</span>
 				</div>
 			</div>
@@ -215,8 +216,15 @@
 
 						<div class="topentry_text"><%topentry_body></div>
 						<!--more-->
+
 						<p class="entry_more"><%topentry_more></p>
 						<!--/more-->
+
+						<!--more_link-->
+						<p class="entry_more_link">
+							<a href="<%topentry_link>#more"><%template_extend></a>
+						</p>
+						<!--/more_link-->
 
 						<!--community-->
 						<div class="entry_community">
@@ -225,23 +233,18 @@
 						</div>
 						<!--/community-->
 
-
 						<!--allow_comment-->
 						コメント <a href="<%topentry_link>#comment-top" class="comment"
-							title="<%template_post_comment>"><i
-							class="comment_icon tpl_icon"></i><%topentry_comment_num></a>
+							title="<%template_post_comment>"><span class="badge"><%topentry_comment_num></span></a>
 						<!--/allow_comment-->
+
 						<!--allow_tb-->
 						トラックバック <a href="<%topentry_link>#trackback-top" class="track"
-							title="<%template_trackback>"><i class="track_icon tpl_icon"></i><%topentry_tb_num></a>
+							title="<%template_trackback>"><span class="badge"><%topentry_tb_num></span></a>
 						<!--/allow_tb-->
 
-						<!--more_link-->
-						<p class="entry_more_link">
-							<a href="<%topentry_link>#more"><%template_extend></a>
-						</p>
-						<!--/more_link-->
 						<!--/entry_body-->
+
 					</article>
 					<!--/topentry-->
 					<!--/not_titlelist_area-->
@@ -267,63 +270,97 @@
 					<!--/permanent_area-->
 					<!-- ページャ 記事 -->
 
-
 					<!-- コメント投稿フォーム -->
 					<!--comment_area-->
 					<h2 id="comment-top" class="sub_contents_area_title"><%template_comment></h2>
 					<form action="./" method="post" name="comment_form"
-						id="comment_form">
-						<input type="hidden" name="mode" value="regist" /> <input
+						id="comment_form" class="form-horizontal">
+						<input type="hidden" name="mode" value="regist" /><input
 							type="hidden" name="comment[no]" value="<%pno>" />
-						<div>
-							<label for="name"><%template_name></label> <input id="name"
-								class="input_text" type="text" name="comment[name]" size="30"
-								value="<%cookie_name>" />
+
+						<div class="form-group">
+							<label for="name" class="cal-sm-2 control-label"><%template_name></label>
+							<div class="cal-sm-10">
+								<input id="name" class="input_text form-control" " type="text"
+									name="comment[name]" size="30" value="<%cookie_name>" />
+							</div>
 						</div>
-						<div>
-							<label for="subject"><%template_title></label> <input
-								id="subject" class="input_text" name="comment[title]"
-								type="text" size="30" value="No title"
-								onblur="if (this.value == '')
+
+						<div class="form-group">
+							<label for="subject" class="cal-sm-2 control-label"><%template_title></label>
+							<div class="cal-sm-10">
+								<input id="subject" class="input_text form-control"
+									name="comment[title]" type="text" size="30"
+									onblur="if (this.value == '')
                                                    this.value = 'No title';"
-								onfocus="if (this.value == 'No title')
+									onfocus="if (this.value == 'No title')
                                                    this.value = '';" />
+							</div>
 						</div>
-						<div>
-							<label for="mail"><%template_address></label> <input id="mail"
-								class="input_text" type="text" name="comment[mail]" size="30"
-								value="<%cookie_mail>" />
+
+						<div class="form-group">
+							<label for="mail" class="cal-sm-2 control-label"><%template_address></label>
+							<div class="cal-sm-10">
+								<input id="mail" class="input_text form-control" type="text"
+									name="comment[mail]" size="30" value="<%cookie_mail>" />
+							</div>
 						</div>
-						<div>
-							<label for="url">URL</label> <input id="url" class="input_text"
-								type="text" name="comment[url]" size="30" value="<%cookie_url>" />
+
+						<div class="form-group">
+							<label for="url" class="cal-sm-2 control-label">URL</label>
+							<div class="cal-sm-10">
+								<input id="url" class="input_text form-control" type="text"
+									name="comment[url]" size="30" value="<%cookie_url>" />
+							</div>
 						</div>
-						<div>
-							<label for="pass"><%template_password></label> <input id="pass"
-								class="input_text" type="password" name="comment[pass]"
-								size="20" />
+
+						<div class="form-group">
+							<label for="pass" class="cal-sm-2 control-label"><%template_password></label>
+							<div class="cal-sm-10">
+								<input id="pass" class="input_text form-control" type="password"
+									name="comment[pass]" size="20" />
+							</div>
 						</div>
-						<div>
-							<%template_private> <input id="himitu" type="checkbox"
-								name="comment[himitu]" />
+
+						<div class="form-group">
+							<div class="cal-sm-2">
+								<!-- 非公開コメント -->
+								<%template_private> <input id="himitu" type="checkbox"
+									name="comment[himitu]" />
+							</div>
+							<label class="himitu_label cal-sm-10 control-label" for="himitu"><%template_private_check></label>
 						</div>
-						<div>
-							<label class="himitu_label" for="himitu"><%template_private_check></label>
-							<label for="comment"><%template_body></label>
-						</div>
-						<div>
-							<script type="text/javascript" src="<%template_comment_js>"></script>
-							<p>
+
+						<div class="form-group">
+							<label for="comment" class="cal-sm-2"><%template_body></label>
+							<div class="cal-sm-4">
+								<script type="text/javascript" src="<%template_comment_js>"></script>
+							</div>
+							<div class="cal-sm-4 cal-sm-offset-2">
 								<textarea id="comment" cols="20" rows="5" name="comment[body]"></textarea>
-							</p>
+							</div>
 						</div>
-						<p class="form_btn">
-							<input type="submit" value="<%template_send>" />
-						</p>
+
+						<div class="form-group">
+							<div class="cal-sm-12">
+								<p class="form_btn">
+									<input type="submit" class="btn btn-default"
+										value="<%template_send>" />
+								</p>
+							</div>
+						</div>
+
 					</form>
+
+
 					<!--comment-->
-					<h3 id="comment<%comment_no>" class="sub_contents_title"><%comment_title></h3>
-					<div class="sub_contents_body"><%comment_body></div>
+					<h3 id="comment<%comment_no>"
+						class="sub_contents_title glyphicon glyphicon-comment"><%comment_title></h3>
+
+					<div class="sub_contents_body">
+						<span aria-hidden="true"> <%comment_body></span>
+					</div>
+
 					<p class="sub_contents_footer">
 						<span class="date"><%comment_year>-<%comment_month>-<%comment_day>
 							<%comment_hour>:<%comment_minute>&nbsp;</span> <span class="author"><%comment_mail+name>&nbsp;</span>
@@ -332,6 +369,7 @@
 							title="<%template_edit_comment>"><%template_edit></a></span>
 					</p>
 					<!--/comment-->
+
 					<!--/comment_area-->
 					<!-- /コメント投稿フォーム -->
 
@@ -465,9 +503,10 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="/"> Ise-blog </a> <a
-					class="navbar-brand" href="#top">上へ</a> <a class="navbar-brand"
-					href="#bottompage">下へ</a>
+				<a class="navbar-brand" href="/"><span
+					class="glyphicon glyphicon-home" aria-hidden="true">
+						Ise-blog </span></a> <a class="navbar-brand" href="#top">上へ</a> <a
+					class="navbar-brand" href="#bottompage">下へ</a>
 			</div>
 		</div>
 	</nav>

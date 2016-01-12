@@ -1,471 +1,505 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title><!--not_index_area--><%sub_title> - <!--/not_index_area--><%blog_name>
-</title>
-<!--index_area-->
-<meta name="description" content="<%introduction>">
-<!--/index_area-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="<%author_name>">
-<meta name="twitter:widgets:csp" content="on">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@moccostan">
+        <title><!--not_index_area--><%sub_title> - <!--/not_index_area--><%blog_name>
+        </title>
+        <!--index_area-->
+        <meta name="description" content="<%introduction>">
+        <!--/index_area-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="<%author_name>">
+        <meta name="twitter:widgets:csp" content="on">
 
-<link rel="alternate" type="application/rss+xml" href="<%url>?xml"
-	title="RSS">
+        <link rel="alternate" type="application/rss+xml" href="<%url>?xml"
+              title="RSS">
 
-<!--prevpage-->
-<link rel="prev" href="<%prevpage_url>">
-<!--/prevpage-->
-<!--nextpage-->
-<link rel="next" href="<%nextpage_url>">
-<!--/nextpage-->
-<!--preventry-->
-<link rel="next" href="<%preventry_url>">
-<!--/preventry-->
-<!--nextentry-->
-<link rel="prev" href="<%nextentry_url>">
-<!--/nextentry-->
-<link rel="start" href="<%url>">
+        <!--prevpage-->
+        <link rel="prev" href="<%prevpage_url>">
+        <!--/prevpage-->
+        <!--nextpage-->
+        <link rel="next" href="<%nextpage_url>">
+        <!--/nextpage-->
+        <!--preventry-->
+        <link rel="next" href="<%preventry_url>">
+        <!--/preventry-->
+        <!--nextentry-->
+        <link rel="prev" href="<%nextentry_url>">
+        <!--/nextentry-->
+        <link rel="start" href="<%url>">
 
-<!--[if lt IE 9]>
-                    <script src="http://static.fc2.com/sh_js/html5shiv.js"></script>
-                  <![endif]-->
+        <!--[if lt IE 9]>
+                            <script src="http://static.fc2.com/sh_js/html5shiv.js"></script>
+                          <![endif]-->
 
-<link rel="stylesheet" href="<%css_link>">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-	type="text/css" />
-<link rel="stylesheet"
-	href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
-<link rel="stylesheet" type="text/css"
-	href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
-<link rel="stylesheet" type="text/css"
-	href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
-<script type="text/javascript"
-	src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript"
-	src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript"
-	src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-<script type="text/javascript">
-	hljs.initHighlightingOnLoad();
+        <link rel="stylesheet" href="<%css_link>">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+              type="text/css" />
+        <link rel="stylesheet"
+              href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/styles/default.min.css">
+        <link rel="stylesheet" type="text/css"
+              href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+        <link rel="stylesheet" type="text/css"
+              href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
+        <script
+        src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.0.0/highlight.min.js"></script>
+        <script type="text/javascript"
+        src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript"
+        src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript"
+        src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+        <script type="text/javascript">
+            hljs.initHighlightingOnLoad();
 
-	$(document).ready(function() {
+            $(document).ready(function () {
 
-		$('.mainitem').slick({
-			arrows : false,
-			asNavFor : ".subitem",
-			autoplay : true,
-			slidesToShow : 1,
-			autoplaySpeed : 5000
-		});
+                $('.mainitem').slick({
+                    arrows: false,
+                    asNavFor: ".subitem",
+                    autoplay: true,
+                    slidesToShow: 1,
+                    autoplaySpeed: 5000
+                });
 
-		$('.subitem').slick({
-			vertical : true, //縦表示
-			//arrows : true, 矢印
-			//autoplaySpeed : 5000    自動スライドの間隔
-			//autoplay : true, 自動スライド
-			//slidesToScroll:0     何個ずつスライドするか
-			slidesToShow : 4, //スライド表示数
-			asNavFor : ".mainitem", //指定したスライドと動きを同期する
-			focusOnSelect : true, //クリックした時にそのスライドをトップに持ってくる
-		});
-	});
-</script>
-</head>
-<body class="<!--index_area-->top_page<!--/index_area-->">
+                $('.subitem').slick({
+                    arrows: false,
+                    vertical: true, //縦表示
+                    //arrows : true, 矢印
+                    //autoplaySpeed : 5000    自動スライドの間隔
+                    //autoplay : true, 自動スライド
+                    //slidesToScroll:0     何個ずつスライドするか
+                    slidesToShow: 4, //スライド表示数
+                    asNavFor: ".mainitem", //指定したスライドと動きを同期する
+                    focusOnSelect: true, //クリックした時にそのスライドをトップに持ってくる
+                });
+            });
+        </script>
+    </head>
+    <body class="<!--index_area-->top_page<!--/index_area-->">
 
-	<div class="container-fluid">
-		<div class="row shitaborder">
+        <div class="container-fluid">
+            <div class="row shitaborder">
 
-			<header class="col-sm-3">
-				<h1>
-					<a href="<%url>"><%blog_name></a>
-				</h1>
-			</header>
+                <header class="col-sm-3">
+                    <h1>
+                        <a href="<%url>"><%blog_name></a>
+                    </h1>
+                </header>
 
-			<div class="col-sm-3">
-				<p><%introduction></p>
-			</div>
+                <div class="col-sm-5">
+                    <p><%introduction></p>
+                </div>
 
-		</div>
+            </div>
 
-		<!--index_area-->
+            <!--index_area-->
 
-		<div class="row shitaborder ise_contents_menu">
+            <div class="row ise_contents_menu">
 
-			<div class="mainitem col-sm-3">
-				<div>
-					WiiU 零 濡鴉ノ巫女
-					<p>
-						<a href="">いせうぃき 零 濡鴉ノ巫女攻略</a>
-					</p>
-					シナリオ攻略、霊リスト、ファイル一覧、QアンドAやSSランク規定値計算ツールや攻略Etc...
-				</div>
-				<div>
-					<p>UMVC3 COMBO VID.</p>
-					<iframe height="100%"
-						src="https://www.youtube.com/embed/keKl69dbuyM"></iframe>
-					<p>
-						<a href="">YouTube MyList</a>
-					</p>
-				</div>
-				<div>
-					3DS コードオブプリンセス
-					<p>
-						<a href="">コードオブプリンセス攻略</a>
-					</p>
-				</div>
-				<div>
-					<a href="">商品レビュー</a>
-				</div>
-				<div>
-					<a href="">プロフィール</a>
-				</div>
-			</div>
+                <div class="mainitem col-sm-3">
+                    <div>
+                        WiiU 零 濡鴉ノ巫女
+                        <p>
+                            <a href="http://isedelica.wiki.fc2.com/">いせうぃき 零 濡鴉ノ巫女攻略</a>
+                        </p>
+                        シナリオ攻略、霊リスト、ファイル一覧、QアンドAやSSランク規定値計算ツールや攻略Etc...
+                    </div>
+                    <div>
+                        <p>X360/PS3 UMVC3 COMBO VID.</p>
+                        <iframe height="90%" width="90%" src="https://www.youtube.com/embed/keKl69dbuyM" frameborder="0" allowfullscreen></iframe>
+                        <p>
+                            <a href="https://www.youtube.com/playlist?list=PLX4xCnb6zgf01EhvQZDKaq5_3mGmpoL2E">YouTube MyList</a>
+                        </p>
+                        <p>アルカプのコンボ動画です。</p>
+                    </div>
+                    <div>
+                        <p>3DS コードオブプリンセス</p>
+                        <p>
+                            <a href="http://isedelica.blog.fc2.com/blog-category-27.html">コードオブプリンセス攻略</a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <a href="http://isedelica.blog.fc2.com/blog-entry-86.html">プロフィール</a>
+                        </p>
+                        <p>The History of Isedelica!</p>
+                    </div>
+                </div>
 
-			<div class="subitem col-sm-3 panel panel-danger">
-				<div class="panel ise_contents_item">
-					<span class="glyphicon glyphicon-book" aria-hidden="true"> 零
-						濡鴉ノ巫女攻略</span>
-				</div>
-				<div class="panel ise_contents_item">
-					<span class="glyphicon glyphicon-film" aria-hidden="true">
-						UMVC3 COMBO</span>
-				</div>
-				<div class="panel ise_contents_item">
-					<span class="glyphicon glyphicon-book" aria-hidden="true">
-						コドプリ攻略</span>
-				</div>
-				<div class="panel ise_contents_item">
-					<span class="glyphicon glyphicon-comment" aria-hidden="true">
-						レビュー</span>
-				</div>
-				<div class="panel ise_contents_item">
-					<span class="glyphicon glyphicon-comment" aria-hidden="true">
-						プロフィール</span>
-				</div>
-			</div>
+                <div class="subitem col-sm-3 panel panel-danger">
+                    <div class="panel ise_contents_item">
+                        <span class="glyphicon glyphicon-book" aria-hidden="true"> 零
+                            濡鴉ノ巫女攻略</span>
+                    </div>
+                    <div class="panel ise_contents_item">
+                        <span class="glyphicon glyphicon-film" aria-hidden="true">
+                            UMVC3 COMBO</span>
+                    </div>
+                    <div class="panel ise_contents_item">
+                        <span class="glyphicon glyphicon-book" aria-hidden="true">
+                            コドプリ攻略</span>
+                    </div>
+                    <div class="panel ise_contents_item">
+                        <span class="glyphicon glyphicon-comment" aria-hidden="true">
+                            プロフィール</span>
+                    </div>
+                </div>
 
-			<div class="col-sm-3">
-				<!--  -->
-				<!--permanent_area-->
+                <div class="col-sm-3">
+                    <!--  -->
+                    <!--permanent_area-->
 
-				<!--/permanent_area-->
+                    <!--/permanent_area-->
 
-				<!--plugin-->
+                    <!--plugin-->
 
-				<!--plugin_second-->
-				<aside class="plugin_second sidecontents_area plg_area">
-					<h2 class="plg_title" style="text-align: &amp;amp;"><%plugin_second_title></h2>
-					<!--plugin_second_description-->
-					<div class="plg_desc_header" style="text-align: &amp;amp;"><%plugin_second_description></div>
-					<!--/plugin_second_description-->
-					<div class="plg_body cf" style="text-align: &amp;amp;"><%plugin_second_content></div>
-					<!--plugin_second_description2-->
-					<div class="plg_desc_footer" style="text-align: &amp;amp;"><%plugin_second_description2></div>
-					<!--/plugin_second_description2-->
-				</aside>
-				<!--/plugin_second-->
+                    <!--plugin_second-->
+                    <aside class="plugin_second sidecontents_area plg_area">
+                        <!--plugin_second_description-->
+                        <div class="plg_desc_header" style="text-align: &amp;amp;"><%plugin_second_description></div>
+                        <!--/plugin_second_description-->
+                        <div class="plg_body cf" style="text-align: &amp;amp;"><%plugin_second_content></div>
+                        <!--plugin_second_description2-->
+                        <div class="plg_desc_footer" style="text-align: &amp;amp;"><%plugin_second_description2></div>
+                        <!--/plugin_second_description2-->
+                    </aside>
+                    <!--/plugin_second-->
 
-				<!--/plugin-->
-			</div>
+                    <!--/plugin-->
+                </div>
 
-		</div>
+            </div>
 
-		<!--/index_area-->
+            <!--/index_area-->
 
 
-		<div class="row">
+            <div class="row ise_entry">
 
-			<div class="col-sm-6">
-				<div id="l-container">
-
-
-					<!-- 記事繰り返し表示(トップ記事一覧) -->
-					<!--not_titlelist_area-->
-					<!--not_search_area-->
-					<!--topentry-->
-					<article class="topentry shitaborder" id="e<%topentry_no>">
-						<header class="page-header">
-							<h1 class="topentry_title">
-								<!--not_permanent_area-->
-								<a href="<%topentry_link>"> <!--/not_permanent_area-->
-									<%topentry_title> <!--not_permanent_area-->
-								</a>
-								<!--/not_permanent_area-->
-								<small><%topentry_year>/<%topentry_month>/<%topentry_day></small>
-							</h1>
-							カテゴリ - <a href="<%topentry_category_link>" class="category"
-								title="<%template_view_category>"><%topentry_category></a>
-						</header>
-
-						<div class="topentry_text"><%topentry_body></div>
-						<!--more-->
-						<p class="entry_more"><%topentry_more></p>
-						<!--/more-->
-
-						<!--community-->
-						<div class="entry_community">
-							<%template_theme>:<a href="<%topentry_thread_link>"><%topentry_thread_title></a>
-							- <%template_genre>:<a href="<%topentry_community_janrelink>"><%topentry_community_janrename></a>
-						</div>
-						<!--/community-->
+                <div class="col-sm-6">
+                    <div id="l-container">
 
 
-						<!--allow_comment-->
-						コメント <a href="<%topentry_link>#comment-top" class="comment"
-							title="<%template_post_comment>"><i
-							class="comment_icon tpl_icon"></i><%topentry_comment_num></a>
-						<!--/allow_comment-->
-						<!--allow_tb-->
-						トラックバック <a href="<%topentry_link>#trackback-top" class="track"
-							title="<%template_trackback>"><i class="track_icon tpl_icon"></i><%topentry_tb_num></a>
-						<!--/allow_tb-->
+                        <!-- 記事繰り返し表示(トップ記事一覧) -->
+                        <!--not_titlelist_area-->
+                        <!--not_search_area-->
+                        <!--topentry-->
+                        <article class="topentry shitaborder" id="e<%topentry_no>">
+                            <header class="page-header">
+                                <h1 class="topentry_title">
+                                    <!--not_permanent_area-->
+                                    <a href="<%topentry_link>"> <!--/not_permanent_area-->
+                                        <%topentry_title> <!--not_permanent_area-->
+                                    </a>
+                                    <!--/not_permanent_area-->
+                                    <small><%topentry_year>/<%topentry_month>/<%topentry_day></small>
+                                </h1>
+                                カテゴリ - <a href="<%topentry_category_link>" class="category"
+                                          title="<%template_view_category>"><%topentry_category></a>
+                            </header>
 
-						<!--more_link-->
-						<p class="entry_more_link">
-							<a href="<%topentry_link>#more"><%template_extend></a>
-						</p>
-						<!--/more_link-->
-						<!--/entry_body-->
-					</article>
-					<!--/topentry-->
-					<!--/not_titlelist_area-->
-					<!--/not_search_area-->
-					<!-- /記事繰り返し表示(トップ記事一覧) -->
+                            <div class="topentry_text"><%topentry_body></div>
+                            <!--more-->
+                            <div class="ise_entry"></div>
+                            <p class="entry_more"><%topentry_more></p>
+                            <!--/more-->
 
-					<!-- ページャ 記事 -->
-					<!--permanent_area-->
-					<!--preventry-->
-					<a class="pager_prev" href="<%preventry_url>"> <i
-						class="prev_icon tpl_icon"></i><span>prev</span>
-					</a>
-					<!--/preventry-->
+                            <!--more_link-->
+                            <p>
+                                <a class="btn btn-default btn-lg" href="<%topentry_link>#more"><%template_extend></a>
+                            </p>
+                            <!--/more_link-->
 
-					<a class="pager_home" href="<%url>" title="<%template_home>">
-						home </a>
+                            <!--community-->
+                            <div class="entry_community">
+                                <%template_theme>:<a href="<%topentry_thread_link>"><%topentry_thread_title></a>
+                                - <%template_genre>:<a href="<%topentry_community_janrelink>"><%topentry_community_janrename></a>
+                            </div>
+                            <!--/community-->
 
-					<!--nextentry-->
-					<a class="pager_next" href="<%nextentry_url>"> <span>next</span><i
-						class="next_icon tpl_icon"></i>
-					</a>
-					<!--/nextentry-->
-					<!--/permanent_area-->
-					<!-- ページャ 記事 -->
+                            <!--allow_comment--><div>
+                                コメント <a href="<%topentry_link>#comment-top" class="comment"
+                                        title="<%template_post_comment>"><span class="badge"><%topentry_comment_num></span></a>
+                                <!--/allow_comment-->
 
+                                <!--allow_tb-->
+                                トラックバック <a href="<%topentry_link>#trackback-top" class="track"
+                                           title="<%template_trackback>"><span class="badge"><%topentry_tb_num></span></a></div>
+                            <!--/allow_tb-->
 
-					<!-- コメント投稿フォーム -->
-					<!--comment_area-->
-					<h2 id="comment-top" class="sub_contents_area_title"><%template_comment></h2>
-					<form action="./" method="post" name="comment_form"
-						id="comment_form">
-						<input type="hidden" name="mode" value="regist" /> <input
-							type="hidden" name="comment[no]" value="<%pno>" />
-						<div>
-							<label for="name"><%template_name></label> <input id="name"
-								class="input_text" type="text" name="comment[name]" size="30"
-								value="<%cookie_name>" />
-						</div>
-						<div>
-							<label for="subject"><%template_title></label> <input
-								id="subject" class="input_text" name="comment[title]"
-								type="text" size="30" value="No title"
-								onblur="if (this.value == '')
-                                                   this.value = 'No title';"
-								onfocus="if (this.value == 'No title')
-                                                   this.value = '';" />
-						</div>
-						<div>
-							<label for="mail"><%template_address></label> <input id="mail"
-								class="input_text" type="text" name="comment[mail]" size="30"
-								value="<%cookie_mail>" />
-						</div>
-						<div>
-							<label for="url">URL</label> <input id="url" class="input_text"
-								type="text" name="comment[url]" size="30" value="<%cookie_url>" />
-						</div>
-						<div>
-							<label for="pass"><%template_password></label> <input id="pass"
-								class="input_text" type="password" name="comment[pass]"
-								size="20" />
-						</div>
-						<div>
-							<%template_private> <input id="himitu" type="checkbox"
-								name="comment[himitu]" />
-						</div>
-						<div>
-							<label class="himitu_label" for="himitu"><%template_private_check></label>
-							<label for="comment"><%template_body></label>
-						</div>
-						<div>
-							<script type="text/javascript" src="<%template_comment_js>"></script>
-							<p>
-								<textarea id="comment" cols="20" rows="5" name="comment[body]"></textarea>
-							</p>
-						</div>
-						<p class="form_btn">
-							<input type="submit" value="<%template_send>" />
-						</p>
-					</form>
-					<!--comment-->
-					<h3 id="comment<%comment_no>" class="sub_contents_title"><%comment_title></h3>
-					<div class="sub_contents_body"><%comment_body></div>
-					<p class="sub_contents_footer">
-						<span class="date"><%comment_year>-<%comment_month>-<%comment_day>
-							<%comment_hour>:<%comment_minute>&nbsp;</span> <span class="author"><%comment_mail+name>&nbsp;</span>
-						<span class="uri"><%comment_url+str>&nbsp;</span> <span
-							class="edit"><a href="<%comment_edit_link>"
-							title="<%template_edit_comment>"><%template_edit></a></span>
-					</p>
-					<!--/comment-->
-					<!--/comment_area-->
-					<!-- /コメント投稿フォーム -->
+                            <!--/entry_body-->
 
-					<!-- コメント編集フォーム -->
-					<!--edit_area-->
-					<div id="ed" class="comment_area sub_contents">
-						<h2 id="comment-top" class="sub_contents_title"><%template_edit_comment></h2>
+                        </article>
+                        <!--/topentry-->
+                        <!--/not_titlelist_area-->
+                        <!--/not_search_area-->
+                        <!-- /記事繰り返し表示(トップ記事一覧) -->
 
-						<form action="./" method="post" name="comment_form"
-							id="comment_form">
-							<input type="hidden" name="mode" value="edit" /> <input
-								type="hidden" name="mode2" value="edited" /> <input
-								type="hidden" name="edit[rno]" value="<%eno>" /> <label
-								for="name"><%template_name></label> <input id="edit[name]"
-								class="input_text" type="text" name="edit[name]" size="30"
-								value="<%edit_name>" /> <label for="subject"><%template_title></label>
-							<input id="subject" class="input_text" type="text"
-								name="edit[title]" size="30" value="<%edit_title>" /> <label
-								for="mail"><%template_address></label> <input id="mail"
-								class="input_text" type="text" name="edit[mail]" size="30"
-								value="<%edit_mail>" /> <label for="url">URL</label> <input
-								id="url" class="input_text" type="text" name="edit[url]"
-								size="30" value="<%edit_url>" /> <label for="pass"><%template_password></label>
-							<input id="pass" class="input_text" type="password"
-								name="edit[pass]" size="20" />
-							<div class="form_title"><%template_private></div>
-							<input id="himitu" type="checkbox" name="edit[himitu]" /><label
-								for="himitu"><%template_private_check></label> <label
-								for="comment"><%template_body></label>
-							<script type="text/javascript" src="<%template_comment_js>"></script>
-							<textarea id="comment" cols="50" rows="5" name="edit[body]"><%edit_body></textarea>
-							<p class="form_btn">
-								<input type="submit" value="<%template_send>" /><input
-									type="submit" name="edit[delete]" value="<%template_delete>" />
-							</p>
-						</form>
-					</div>
-					<!--/content-->
-					<!--/edit_area-->
-					<!-- /コメント編集フォーム -->
+                        <!-- ページャ 記事 -->
+                        <!--permanent_area-->
+                        <!--preventry-->
+                        <a class="pager_prev" href="<%preventry_url>"> <i
+                                class="prev_icon tpl_icon"></i><span>prev</span>
+                        </a>
+                        <!--/preventry-->
 
+                        <a class="pager_home" href="<%url>" title="<%template_home>">
+                            home </a>
 
-					<!-- トラックバックURL表示(記事内) -->
-					<!--trackback_area-->
-					<h2 id="trackback-top" class="sub_contents_area_title"><%template_trackback></h2>
-					<input class="trackback_input" onfocus="this.select()"
-						value="<%trackback_url>" readonly="readOnly" />
-					<p class="trackback_link">
-						<a
-							href="javascript:window.location.replace('http://blog.fc2.com/?url='+window.location.href);"
-							title="<%template_trackback_this>"><%template_trackback_this></a>
-					</p>
+                        <!--nextentry-->
+                        <a class="pager_next" href="<%nextentry_url>"> <span>next</span><i
+                                class="next_icon tpl_icon"></i>
+                        </a>
+                        <!--/nextentry-->
+                        <!--/permanent_area-->
+                        <!-- ページャ 記事 -->
 
-					<!--trackback-->
-					<h3 id="trackback<%tb_no>" class="sub_contents_title">
-						<a href="<%tb_url>" title="<%template_trackback>"> <%tb_title>
-						</a>
-					</h3>
-					<div class="sub_contents_body"><%tb_excerpt></div>
-					<p class="sub_contents_footer">
-						<span><%tb_year>-<%tb_month>-<%tb_day>
-							<%tb_hour>:<%tb_minute>&nbsp;</span> <span><%tb_blog_name></span>
-					</p>
-					<!--/trackback-->
-					<!--/trackback_area-->
-					<!-- /トラックバックURL表示(記事内) -->
+                        <!-- コメント投稿フォーム -->
+                        <!--comment_area-->
+                        <h2 id="comment-top" class="sub_contents_area_title"><%template_comment></h2>
+                        <form action="./" method="post" name="comment_form"
+                              id="comment_form" class="form-horizontal">
+                            <input type="hidden" name="mode" value="regist" /><input
+                                type="hidden" name="comment[no]" value="<%pno>" />
+
+                            <div class="form-group">
+                                <label for="name" class="cal-sm-2 control-label"><%template_name></label>
+                                <div class="cal-sm-10">
+                                    <input id="name" class="input_text form-control" type="text"
+                                           name="comment[name]" size="30" value="<%cookie_name>" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="cal-sm-2 control-label"><%template_title></label>
+                                <div class="cal-sm-10">
+                                    <input id="subject" class="input_text form-control"
+                                           name="comment[title]" type="text" size="30"
+                                           onblur="if (this.value == '')
+                                                       this.value = 'No title';"
+                                           onfocus="if (this.value == 'No title')
+                                                       this.value = '';" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mail" class="cal-sm-2 control-label"><%template_address></label>
+                                <div class="cal-sm-10">
+                                    <input id="mail" class="input_text form-control" type="text"
+                                           name="comment[mail]" size="30" value="<%cookie_mail>" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="url" class="cal-sm-2 control-label">URL</label>
+                                <div class="cal-sm-10">
+                                    <input id="url" class="input_text form-control" type="text"
+                                           name="comment[url]" size="30" value="<%cookie_url>" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pass" class="cal-sm-2 control-label"><%template_password></label>
+                                <div class="cal-sm-10">
+                                    <input id="pass" class="input_text form-control" type="password"
+                                           name="comment[pass]" size="20" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="cal-sm-2">
+                                    <!-- 非公開コメント -->
+                                    <%template_private> <input id="himitu" type="checkbox"
+                                                               name="comment[himitu]" />
+                                </div>
+                                <label class="himitu_label cal-sm-10 control-label" for="himitu"><%template_private_check></label>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comment" class="cal-sm-2"><%template_body></label>
+                                <div class="cal-sm-4">
+                                    <script type="text/javascript" src="<%template_comment_js>"></script>
+                                </div>
+                                <div class="cal-sm-4 cal-sm-offset-2">
+                                    <textarea id="comment" cols="20" rows="5" name="comment[body]"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="cal-sm-12">
+                                    <p class="form_btn">
+                                        <input type="submit" class="btn btn-default"
+                                               value="<%template_send>" />
+                                    </p>
+                                </div>
+                            </div>
+
+                        </form>
 
 
-					<!-- ページャ 記事一覧ページ -->
-					<!--not_permanent_area-->
-					<!--prevpage-->
-					<a class="pager_prev" href="<%prevpage_url>"> <i
-						class="prev_icon tpl_icon"></i><span>prev</span>
-					</a>
-					<!--/prevpage-->
+                        <!--comment-->
+                        <h3 id="comment<%comment_no>"
+                            class="sub_contents_title glyphicon glyphicon-comment"><%comment_title></h3>
 
-					<a class="pager_home" href="<%url>"> home </a>
+                        <div class="sub_contents_body">
+                            <span aria-hidden="true"> <%comment_body></span>
+                        </div>
 
-					<!--nextpage-->
-					<a class="pager_next" href="<%nextpage_url>"> <span>next</span><i
-						class="next_icon tpl_icon"></i>
-					</a>
-					<!--/nextpage-->
-					<!--/not_permanent_area-->
-					<!-- /ページャ 記事一覧ページ -->
+                        <p class="sub_contents_footer">
+                            <span class="date"><%comment_year>-<%comment_month>-<%comment_day>
+                                <%comment_hour>:<%comment_minute>&nbsp;</span> <span class="author"><%comment_mail+name>&nbsp;</span>
+                            <span class="uri"><%comment_url+str>&nbsp;</span> <span
+                                class="edit"><a href="<%comment_edit_link>"
+                                            title="<%template_edit_comment>"><%template_edit></a></span>
+                        </p>
+                        <!--/comment-->
 
-					<!-- /#l-main -->
-				</div>
-			</div>
+                        <!--/comment_area-->
+                        <!-- /コメント投稿フォーム -->
 
-			<div class="col-sm-3">
-				<!--  -->
-				<!--permanent_area-->
+                        <!-- コメント編集フォーム -->
+                        <!--edit_area-->
+                        <div id="ed" class="comment_area sub_contents">
+                            <h2 id="comment-top" class="sub_contents_title"><%template_edit_comment></h2>
 
-				<!--/permanent_area-->
-
-				<!--plugin-->
-				<!--plugin_first-->
-				<aside class="plugin_first sidecontents_area plg_area">
-					<h2 class="plg_title" style="text-align: &amp;amp;"><%plugin_first_title></h2>
-					<!--plugin_first_description-->
-					<div class="plg_desc_header" style="text-align: &amp;amp;"><%plugin_first_description></div>
-					<!--/plugin_first_description-->
-					<div class="plg_body cf" style="text-align: &amp;amp;"><%plugin_first_content></div>
-					<!--plugin_first_description2-->
-					<div class="plg_desc_footer" style="text-align: &amp;amp;"><%plugin_first_description2></div>
-					<!--/plugin_first_description2-->
-				</aside>
-				<!--/plugin_first-->
-
-				<!--/plugin-->
-				<!-- /l-sidecontents -->
-			</div>
-
-		</div>
-		<div class="row">
-			<!-- /container -->
-
-			<div class="col-sm-12" id="bottompage">
-				<footer id="l-footer">
-					<div class="footer_inner">
-						<p class="powered">Powered by <%template_fc2blog></p>
-						<!--Don't delete-->
-						<p class="ad"><%ad> <%ad2></p>
-						<p class="copyright">Copyright &copy; <%blog_name> All Rights
-							Reserved.</p>
-					</div>
-				</footer>
-			</div>
-		</div>
-	</div>
-<!--
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="/"> Ise-blog </a> <a
-					class="navbar-brand" href="#top">上へ</a> <a class="navbar-brand"
-					href="#bottompage">下へ</a>
-			</div>
-		</div>
-	</nav>
- -->
+                            <form action="./" method="post" name="comment_form"
+                                  id="comment_form">
+                                <input type="hidden" name="mode" value="edit" /> <input
+                                    type="hidden" name="mode2" value="edited" /> <input
+                                    type="hidden" name="edit[rno]" value="<%eno>" /> <label
+                                    for="name"><%template_name></label> <input id="edit[name]"
+                                    class="input_text" type="text" name="edit[name]" size="30"
+                                    value="<%edit_name>" /> <label for="subject"><%template_title></label>
+                                <input id="subject" class="input_text" type="text"
+                                       name="edit[title]" size="30" value="<%edit_title>" /> <label
+                                       for="mail"><%template_address></label> <input id="mail"
+                                       class="input_text" type="text" name="edit[mail]" size="30"
+                                       value="<%edit_mail>" /> <label for="url">URL</label> <input
+                                       id="url" class="input_text" type="text" name="edit[url]"
+                                       size="30" value="<%edit_url>" /> <label for="pass"><%template_password></label>
+                                <input id="pass" class="input_text" type="password"
+                                       name="edit[pass]" size="20" />
+                                <div class="form_title"><%template_private></div>
+                                <input id="himitu" type="checkbox" name="edit[himitu]" /><label
+                                    for="himitu"><%template_private_check></label> <label
+                                    for="comment"><%template_body></label>
+                                <script type="text/javascript" src="<%template_comment_js>"></script>
+                                <textarea id="comment" cols="50" rows="5" name="edit[body]"><%edit_body></textarea>
+                                <p class="form_btn">
+                                    <input type="submit" value="<%template_send>" /><input
+                                        type="submit" name="edit[delete]" value="<%template_delete>" />
+                                </p>
+                            </form>
+                        </div>
+                        <!--/content-->
+                        <!--/edit_area-->
+                        <!-- /コメント編集フォーム -->
 
 
-</body>
+                        <!-- トラックバックURL表示(記事内) -->
+                        <!--trackback_area-->
+                        <h2 id="trackback-top" class="sub_contents_area_title"><%template_trackback></h2>
+                        <input class="trackback_input" onfocus="this.select()"
+                               value="<%trackback_url>" readonly="readOnly" />
+                        <p class="trackback_link">
+                            <a
+                                href="javascript:window.location.replace('http://blog.fc2.com/?url='+window.location.href);"
+                                title="<%template_trackback_this>"><%template_trackback_this></a>
+                        </p>
+
+                        <!--trackback-->
+                        <h3 id="trackback<%tb_no>" class="sub_contents_title">
+                            <a href="<%tb_url>" title="<%template_trackback>"> <%tb_title>
+                            </a>
+                        </h3>
+                        <div class="sub_contents_body"><%tb_excerpt></div>
+                        <p class="sub_contents_footer">
+                            <span><%tb_year>-<%tb_month>-<%tb_day>
+                                <%tb_hour>:<%tb_minute>&nbsp;</span> <span><%tb_blog_name></span>
+                        </p>
+                        <!--/trackback-->
+                        <!--/trackback_area-->
+                        <!-- /トラックバックURL表示(記事内) -->
+
+
+                        <!-- ページャ 記事一覧ページ -->
+                        <!--not_permanent_area-->
+                        <!--prevpage-->
+                        <a class="pager_prev" href="<%prevpage_url>"> <i
+                                class="prev_icon tpl_icon"></i><span>prev</span>
+                        </a>
+                        <!--/prevpage-->
+
+                        <a class="pager_home" href="<%url>"> home </a>
+
+                        <!--nextpage-->
+                        <a class="pager_next" href="<%nextpage_url>"> <span>next</span><i
+                                class="next_icon tpl_icon"></i>
+                        </a>
+                        <!--/nextpage-->
+                        <!--/not_permanent_area-->
+                        <!-- /ページャ 記事一覧ページ -->
+
+                        <!-- /#l-main -->
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <!--  -->
+                    <!--permanent_area-->
+
+                    <!--/permanent_area-->
+
+                    <!--plugin-->
+                    <!--plugin_first-->
+                    <aside class="plugin_first sidecontents_area plg_area">
+                        <h2 class="plg_title" style="text-align: &amp;amp;"><%plugin_first_title></h2>
+                        <!--plugin_first_description-->
+                        <div class="plg_desc_header" style="text-align: &amp;amp;"><%plugin_first_description></div>
+                        <!--/plugin_first_description-->
+                        <div class="plg_body cf" style="text-align: &amp;amp;"><%plugin_first_content></div>
+                        <!--plugin_first_description2-->
+                        <div class="plg_desc_footer" style="text-align: &amp;amp;"><%plugin_first_description2></div>
+                        <!--/plugin_first_description2-->
+                    </aside>
+                    <!--/plugin_first-->
+
+                    <!--/plugin-->
+                    <!-- /l-sidecontents -->
+                </div>
+
+            </div>
+            <div class="row">
+                <!-- /container -->
+
+                <div class="col-sm-12 footer_inner" id="bottompage">
+                    <footer id="l-footer">
+                        <p class="powered">Powered by <%template_fc2blog></p>
+                        <!--Don't delete-->
+                        <p class="ad"><%ad> <%ad2></p>
+                        <p class="copyright">Copyright &copy; <%blog_name> All Rights
+                            Reserved.</p>
+                    </footer>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/"><span
+                            class="glyphicon glyphicon-home" aria-hidden="true">
+                            Ise-blog </span></a> <a class="navbar-brand" href="#top">上へ</a> <a
+                        class="navbar-brand" href="#bottompage">下へ</a>
+                </div>
+            </div>
+        </nav>
+
+
+    </body>
 </html>
+​
